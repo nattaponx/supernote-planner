@@ -47,8 +47,11 @@ More common configurations are available in Release section.
 
 ## Environment Setup on Windows
 PHP v8.1.27 - https://windows.php.net/downloads/releases/php-8.1.27-Win32-vs16-x64.zip
+
 php.ini: enabled extensions: {curl, gd, intl, mbstring, exif, openssl}
+
 OpenSSL v3.0.12 - https://slproweb.com/download/Win64OpenSSL-3_2_0.msi
+
 Composer - https://getcomposer.org/Composer-Setup.exe
 
 ### Environment Setup on MacOS
