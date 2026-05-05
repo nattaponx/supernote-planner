@@ -60,8 +60,9 @@ Composer - https://getcomposer.org/Composer-Setup.exe
 3. Use Homebrew to install php version 8.1, run this command: "brew install php@8.1"
 4. User Homebrew to install Composer, run this command: "brew install composer"
 5. Run composer command: "composer dump-autoload", and then "composer update"
-6. Copy files from fonts folder to vendor -> tecnickcom -> fonts
-7. Now it's ready!
+6. If composer update is not successful, some packages might be missing. To install the missing package, use this command "composer require some/package"
+7. Copy files from fonts folder to vendor -> tecnickcom -> fonts
+8. Now it's ready!
 
 #### Notes:
 To buid a pdf, run this command: "php make-planner.php en 11000 2030-01 2030-12 "Planner" "2030" Planner\ 2030.pdf"
