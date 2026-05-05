@@ -45,6 +45,35 @@ I feel is good enough to share. Enjoy.
 See `make-planner.php` and `build.php` for other configurations.
 More common configurations are available in Release section.
 
+## Environment Setup on Windows
+PHP v8.1.27 - https://windows.php.net/downloads/releases/php-8.1.27-Win32-vs16-x64.zip
+php.ini: enabled extensions: {curl, gd, intl, mbstring, exif, openssl}
+OpenSSL v3.0.12 - https://slproweb.com/download/Win64OpenSSL-3_2_0.msi
+Composer - https://getcomposer.org/Composer-Setup.exe
+
+### Environment Setup on MacOS
+1. Install homebrew, run this command: "/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)""
+2. Add Homebrew to MacOS path, run this command: "eval "$(/opt/homebrew/bin/brew shellenv)""
+3. Use Homebrew to install php version 8.1, run this command: "brew install php@8.1"
+4. User Homebrew to install Composer, run this command: "brew install composer"
+5. Run composer command: "composer dump-autoload", and then "composer update"
+6. Copy files from fonts folder to vendor -> tecnickcom -> fonts
+7. Now it's ready!
+
+#### Notes:
+To buid a pdf, run this command: "php make-planner.php en 11000 2030-01 2030-12 "Planner" "2030" Planner\ 2030.pdf"
+
+Make sure to copy all font files of folder /fonts/ into folder /vendor/tecnickcom/tcpdf/fonts/
+
+If necessary adapt the (calendar) year in build.php e.g. to $YEAR = 2024;
+
+php make-planner.php de 11000 2023-12 2025-03 "Daily Planner" "2024" MPDP-2024_de.pdf
+will generate a German (de) version, 1st day of week Monday, dotted, 200 extra pages, 24h, day-shift
+
+See `make-planner.php` and `build.php` for other configurations.
+More common configurations are available in Release section.
+
+
 ## License
 
 The code and planner file are licensed under AGPL-3.0 license.
